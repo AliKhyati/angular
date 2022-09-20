@@ -1,0 +1,7 @@
+.info {
+  display: flex;
+}
+ul {
+  margin-right: 10%;
+  list-style: none;
+}
