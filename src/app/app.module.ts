@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HighglightDirective } from './highglight.directive';
 import { DisplayGuestsDirective } from './display-guests.directive';
+import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserProfileComponent,
     HighglightDirective,
-    DisplayGuestsDirective
+    DisplayGuestsDirective,
+    HomeComponent,
+    MenuComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
