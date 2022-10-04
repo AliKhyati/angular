@@ -1,1 +1,42 @@
-<p>signup works!</p>
+<form (ngSubmit)="myForm.valid && onSubmit()" #myForm="ngForm">
+  <div *ngIf="myForm.submitted">
+    <div *ngIf="firstname.errors">
+      <span *ngIf="firstname.errors?.['required']">Le prénom est requis</span>
+      <span *ngIf="firstname.errors?.['minlength']">La longueur minimale doit être supérieure à 3</span>
+      <span *ngIf="firstname.errors?.['maxlength']">La longueur maximale doit être inférieure à 15</span>
+    </div>
+    <div *ngIf="lastname.errors">
+    <span *ngIf="lastname.errors?.['required']">Le nom est requis</span>
+    <span *ngIf="lastname.errors?.['minlength']">La longueur minimale doit être supérieure à 3</span>
+    <span *ngIf="lastname.errors?.['maxlength']">La longueur maximale doit être inférieure à 15</span>
+  </div>
+    <div *ngIf="email.errors">
+      <span *ngIf="email.errors['email']">L'adresse email doit être valide</span>
+      <span *ngIf="email.errors?.['required']">L'email est requis</span>
+    </div>
+    <div *ngIf="password.errors">
+      <span *ngIf="password.errors?.['required']">Le mdp est requis</span>
+    </div>
+  </div>
+  <div>
+    <label for="firstname">firstname</label>
+    <input name="firstname" type="text" [(ngModel)]="user.firstname" #firstname="ngModel" required minlength="3" maxlength="15"/>
+  </div>
+
+  <div>
+    <label for="lastname">lastname</label>
+    <input name="lastname" type="text" [(ngModel)]="user.lastname" #lastname="ngModel" required minlength="3" maxlength="15">
+  </div>
+
+  <div>
+    <label for="email">email</label>
+    <input name="email" type="text" [(ngModel)]="user.email" #email="ngModel" required email>
+  </div>
+
+    <div>
+    <label for="password">password</label>
+    <input name="password" type="text" [(ngModel)]="user.password" #password="ngModel" required>
+  </div>
+
+  <button type="submit">Sauvegarder</button>
+</form>
