@@ -9,6 +9,7 @@ import { DisplayGuestsDirective } from './display-guests.directive';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { SignupComponent } from './signup/signup.component';
+import { MyFormComponent } from './my-form/my-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SignupComponent } from './signup/signup.component';
     DisplayGuestsDirective,
     HomeComponent,
     MenuComponent,
-    SignupComponent
+    SignupComponent,
+    MyFormComponent
   ],
   imports: [
     BrowserModule,

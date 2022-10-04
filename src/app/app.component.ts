@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Bienvenue sur le site d\'Ali';
-  isThisIngredientVital: boolean = true;
-  displayGuestList: boolean = true;
-  songList: string[] = ["Alejandro", "Ne me quitte pas", "Le temps est bon", "test"];
-  showMovies: boolean = true;
 
 }
